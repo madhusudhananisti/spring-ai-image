@@ -2,6 +2,7 @@ package guru.springframework.springaiimage.services;
 
 
 import guru.springframework.springaiimage.model.Question;
+import org.springframework.web.multipart.MultipartFile;
 
 
 /**
@@ -9,5 +10,7 @@ import guru.springframework.springaiimage.model.Question;
  */
 public interface OpenAIService {
 
-    Object getImage(Question question);
+    byte[] getImage(Question question);
+
+    String getDescription(MultipartFile file);
 }
