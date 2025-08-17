@@ -49,7 +49,7 @@ public class OpenAIServiceImpl implements OpenAIService {
     @Override
     public String getDescription(MultipartFile file) {
         OpenAiChatOptions options = OpenAiChatOptions.builder()
-                .withModel(OpenAiApi.ChatModel.GPT_4_0125_PREVIEW.getValue())
+                .withModel(OpenAiApi.ChatModel.GPT_4_O.getValue())
                 .build();
 
         var userMessage = new UserMessage("Explain what do you see in this picture?", List.of(new Media(MimeTypeUtils.IMAGE_JPEG, file.getResource())));
